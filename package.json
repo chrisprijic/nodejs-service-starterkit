@@ -1,0 +1,61 @@
+{
+    "name": "nodejs-service-starterkit",
+    "version": "0.0.1",
+    "description": "A starter-kit for node.js services",
+    "main": "index.js",
+    "scripts": {
+        "start": "node -r esm index.js",
+        "gen:adapter": "hygen adapters with-prompt",
+        "gen:controller": "hygen controller with-prompt",
+        "gen:use-case": "hygen use-case with-prompt",
+        "test": "jest --silent --colors",
+        "test:list": "jest --colors --silent --verbose",
+        "test:diff": "jest --colors --silent --verbose -o",
+        "test:verbose": "jest --colors --verbose"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/orbeeauto/megazord.git"
+    },
+    "author": "Chris Prijic",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/orbeeauto/megazord/issues"
+    },
+    "homepage": "https://github.com/orbeeauto/megazord#readme",
+    "dependencies": {
+        "body-parser": "^1.18.3",
+        "compression": "^1.7.3",
+        "cors": "^2.8.5",
+        "esm": "^3.2.14",
+        "express": "^4.16.4",
+        "express-status-monitor": "^1.2.3",
+        "http-status": "^1.3.1",
+        "knex": "^0.16.3"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.3.4",
+        "@babel/preset-env": "^7.3.4",
+        "babel-jest": "^24.4.0",
+        "hygen": "^4.0.2",
+        "jest": "^24.3.1"
+    },
+    "jest": {
+        "testRegex": ".*-test\\.js$",
+        "transformIgnorePatterns": [
+            "node_modules/(?!(put_your_modules_here))"
+        ]
+    },
+    "babel": {
+        "presets": [
+            [
+                "@babel/preset-env",
+                {
+                    "targets": {
+                        "node": "current"
+                    }
+                }
+            ]
+        ]
+    }
+}
