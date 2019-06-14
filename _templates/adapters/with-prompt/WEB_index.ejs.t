@@ -1,5 +1,5 @@
 ---
-to: "<%= type == 'web' ? index.js : null %>"
+to: "<%= type == 'web' ? 'index.js' : null %>"
 ---
 // sample index file using the web adapter
 import router from './src/adapters/web/routes';
